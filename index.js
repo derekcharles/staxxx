@@ -1,10 +1,10 @@
 const { Bot } = require("grammy");
-require('@dotenvx/dotenvx').config()
+require('@dotenvx/dotenvx').config({path: __dirname + '/.env'})
 
 const bot = new Bot(process.env.ACCESS_KEY);
 
 // Listening for messages
-bot.on("start", async (ctx) => {
+bot.command("start", async (ctx) => {
     const payload = ctx.match;
     if(payload.startsWith("bizChat")){
         const id = payload.slice(7);
