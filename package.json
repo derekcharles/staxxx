@@ -9,6 +9,7 @@
   "author": "Saucy",
   "license": "ISC",
   "dependencies": {
+    "@dotenvx/dotenvx": "^1.14.2",
     "grammy": "^1.30.0"
   }
 }
