@@ -1,0 +1,14 @@
+{
+  "name": "queenstaxxx",
+  "version": "1.0.0",
+  "description": "queenstaxxx bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saucy",
+  "license": "ISC",
+  "dependencies": {
+    "grammy": "^1.30.0"
+  }
+}
