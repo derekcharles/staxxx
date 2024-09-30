@@ -21,7 +21,7 @@ bot.command("start", async (ctx) =>
       await ctx.reply("Hello what would you be interested in ?")
       const inlineKeyboard = new InlineKeyboard().text("Staxxx Raceplay Paradise").row()
                                                  .text("Custom").row()
-      await ctx.reply(inlineKeyboard)
+      await ctx.reply({reply_markup: inlineKeyboard})
     })
 
 
