@@ -19,9 +19,9 @@ const products = [
 bot.command("start", async (ctx) =>
     { 
       await ctx.reply("Hello what would you be interested in ?")
-      const inlineKeyboard = new InlineKeyboard().text("Saucy - Staxx Unlimited Raceplay Custom").row()
+      const inlineKeyboard = new InlineKeyboard().text("Staxxx Raceplay Paradise").row()
                                                  .text("Custom").row()
-      await ctx.reply(inlineKeyboard, {reply_markup: inlineKeyboard})
+      await ctx.reply(inlineKeyboard)
     })
 
 
