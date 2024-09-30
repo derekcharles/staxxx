@@ -1,4 +1,4 @@
-const { Bot } = require("grammy");
+const { Bot, InlineKeyboard } = require("grammy");
 require('@dotenvx/dotenvx').config({path: __dirname + '/.env'})
 
 const bot = new Bot(process.env.ACCESS_KEY);
@@ -16,7 +16,14 @@ const products = [
         photoUrl: 'https://vignette2.wikia.nocookie.net/fallout/images/b/b9/Iguana_on_a_stick.png'
   }
 ]
-bot.command("start", (ctx) => ctx.reply("Hello what would you be interested in ?"))
-bot.on("message", (ctx) => ctx.reply("Gotcha!"));
+bot.command("start", async (ctx) =>
+    { 
+      await ctx.reply("Hello what would you be interested in ?")
+      const inlineKeyboard = new InlineKeyboard().text("Saucy - Staxx Unlimited Raceplay Custom").row()
+                                                 .text("Custom").row()
+      await ctx.reply(inlineKeyboard, {reply_markup: inlineKeyboard})
+    })
+
+
 // Starting the bot
 bot.start();
