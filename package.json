@@ -4,12 +4,17 @@
   "description": "queenstaxxx bot",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "Saucy",
   "license": "ISC",
   "dependencies": {
-    "@dotenvx/dotenvx": "^1.14.2",
-    "grammy": "^1.30.0"
+    "mocha": "^10.7.3",
+    "node-fetch": "^2.7.0",
+    "node-telegram-bot-api": "^0.66.0",
+    "telegram-test-api": "^4.2.1"
+  },
+  "devDependencies": {
+    "@dotenvx/dotenvx": "^1.14.2"
   }
 }
