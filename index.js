@@ -53,7 +53,7 @@ bot.on("business_message", async (msg) => {
   const reply = msg.text;
   if(reply){
     if(reply.toLowerCase().includes("menu") || reply.toLowerCase().includes("price")){
-      bot.sendMessage(chatId, "Hello would you like to see my menu?",{ reply_markup: wantSaleMenu,business_connection_id: business.id });
+      bot.sendMessage(chatId, "Hello would you like to see my menu? 😈",{ reply_markup: wantSaleMenu,business_connection_id: business.id });
     }
   }
 });
@@ -80,17 +80,17 @@ bot.on('callback_query', async (query) => {
       console.log(err);
     }
 
-  bot.sendMessage(chatId, "Would you like to order anything?", {reply_markup: customSaleQuestion, business_connection_id:  query.message.business_connection_id})
+  bot.sendMessage(chatId, "Would you like to order anything? 😈", {reply_markup: customSaleQuestion, business_connection_id:  query.message.business_connection_id})
 
   } else if (reply.includes("No")) {
-    bot.sendMessage(chatId, "okay how can I help you today?", {business_connection_id:  query.message.business_connection_id})
+    bot.sendMessage(chatId, "okay how can I help you today? 😈", {business_connection_id:  query.message.business_connection_id})
 
   }
   else if (reply.includes("RP/Fetish Custom")) {
-    bot.sendMessage(chatId, "A RP/Fetish Custom! Sounds good", {business_connection_id: query.message.business_connection_id})
+    bot.sendMessage(chatId, "A RP/Fetish Custom! Sounds good 😈", {business_connection_id: query.message.business_connection_id})
   }
   else if (reply.includes("Video Call")){
-    bot.sendMessage(chatId, "A video call! Good Choice!", {business_connection_id: query.message.business_connection_id})
+    bot.sendMessage(chatId, "A video call! Good Choice! 😈", {business_connection_id: query.message.business_connection_id})
   }
 
 });
